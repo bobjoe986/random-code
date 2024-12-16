@@ -1,0 +1,16 @@
+screen -t bash0
+screen -t bash1
+screen -t bash2
+screen -t bash3
+screen -t bash4
+screen -t bash5
+altscreen on
+term screen-256color
+bindkey -k F1 prev
+bindkey -k F2 next
+
+#change the hardstatus settings to give an window list at the bottom of the
+#screen, with the time and date and with the current window highlighted
+hardstatus alwayslastline
+#hardstatus string '%{= kG}%-Lw%{= kW}%50> %n%f* %t%{= kG}%+Lw%< %{= kG}%-=%c:%s%{-}'
+hardstatus string '%{= kb}[ %{C}%H %{b}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{b}][%{C} %m-%d %{C}%c %{b}]'
